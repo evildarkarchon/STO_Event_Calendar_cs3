@@ -1,14 +1,13 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace STO_Event_Calendar
 {
     class JSON
     {
-        string JSONOut;
-        JsonInfo? JSONInfo;
+        private readonly string JSONOut;
+        private JsonInfo? JSONInfo;
         protected struct JsonInfo
         {
             public uint ProgressLimit { get; set; }
@@ -18,8 +17,9 @@ namespace STO_Event_Calendar
             public uint BuyoutDiscount { get; set; }
             public uint DaysLeft { get; set; }
             public uint DaysNeeded { get; set; }
+            public uint DaysRequired { get; set; }
         }
-        public JSON(uint pl, uint pr, uint bz, uint bc, uint bd, uint dl, uint dn)
+        public JSON(uint pl, uint pr, uint bz, uint bc, uint bd, uint dl, uint dn, uint dr)
         {
             JSONInfo = new JsonInfo
             {
@@ -29,7 +29,8 @@ namespace STO_Event_Calendar
                 BuyoutCost = bc,
                 BuyoutDiscount = bd,
                 DaysLeft = dl,
-                DaysNeeded = dn
+                DaysNeeded = dn,
+                DaysRequired = dr
             };
             JSONOut = JsonConvert.SerializeObject(JSONInfo, Formatting.Indented);
         }
