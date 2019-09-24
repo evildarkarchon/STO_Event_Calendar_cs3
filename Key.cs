@@ -32,10 +32,20 @@ namespace Keyboard
         }
         public static string Ask(string message, bool newline)
         {
-            if (newline == default) { newline = false; }
+            // if (newline == default) { newline = false; }
 
-            if (newline == true) { Console.WriteLine(message); }
-            else { Console.Write(message); }
+            // if (newline == true) { Console.WriteLine(message); }
+            // else { Console.Write(message); }
+            switch (newline)
+            {
+                case true:
+                    Console.WriteLine(message);
+                    break;
+                case false:
+                default:
+                    Console.Write(message);
+                    break;
+            }
 
             var Output = Console.ReadLine();
 
@@ -47,8 +57,18 @@ namespace Keyboard
         }
         public static string Ask(string message, string exceptionmsg, bool newline)
         {
-            if (newline == true) { Console.WriteLine(message); }
-            else { Console.Write(message); }
+            // if (newline == true) { Console.WriteLine(message); }
+            // else { Console.Write(message); }
+            switch (newline)
+            {
+                case true:
+                    Console.WriteLine(message);
+                    break;
+                case false:
+                default:
+                    Console.Write(message);
+                    break;
+            }
 
             var Output = Console.ReadLine();
 
@@ -115,10 +135,20 @@ namespace Keyboard
         }
         public static object AskObj(string message, string exceptionmsg, bool newline)
         {
-            if (newline == default) { newline = false; }
+            // if (newline == default) { newline = false; }
 
-            if (newline == true) { Console.WriteLine(message); }
-            else { Console.Write(message); }
+            // if (newline == true) { Console.WriteLine(message); }
+            // else { Console.Write(message); }
+            switch (newline)
+            {
+                case true:
+                    Console.WriteLine(message);
+                    break;
+                case false:
+                default:
+                    Console.Write(message);
+                    break;
+            }
 
             var Output = Console.ReadLine();
 
