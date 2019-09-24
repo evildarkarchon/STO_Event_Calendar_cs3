@@ -29,7 +29,7 @@ namespace STO_Event_Calendar
         [Option('q', "quiet", HelpText = "Suppress all the pretty text output (should be used with --json and/or --print-json)")]
         public bool Quiet { get; set; }
 
-        [Option("print-json", HelpText  = "Print the raw data as json to the console.")]
+        [Option("print-json", HelpText = "Print the raw data as json to the console.")]
         public bool PrintJSON { get; set; }
     }
 }
