@@ -17,7 +17,7 @@ namespace STO_Event_Calendar
         [Option('e', "end-date", HelpText = "Date that the event ends.")]
         public string EndDate { get; set; }
 
-        [Option('r', "reset", HelpText = "Amount of time in hours until the progress limit reset")]
+        [Option('r', "reset", HelpText = "Amount of time, in hours, until the progress limit reset")]
         public float Reset { get; set; }
 
         [Option("write-json", HelpText = "Save the raw data as a JSON file.")]
