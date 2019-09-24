@@ -44,7 +44,7 @@ namespace STO_Event_Calendar
             switch (JSONInfo) 
             { 
                 case null:
-                    throw new ArgumentNullException("Somehow WriteJSON got called while the JSONInfo variable was null.");
+                    throw new ArgumentNullException("Somehow WriteJson got called while the JSONInfo variable was null.");
                 default:
                     File.WriteAllText(OutPath, JsonConvert.SerializeObject(JSONOut, Formatting.Indented));
                     break;
