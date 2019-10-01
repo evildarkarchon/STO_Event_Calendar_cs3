@@ -1,13 +1,17 @@
 ﻿using System;
 using System.IO;
+using System.Globalization;
+using System.Resources;
 using Newtonsoft.Json;
 
-namespace STO_Event_Calendar
+namespace STOEventCalendar
 {
     class JSON
     {
         private readonly string JSONOut;
         private JsonInfo? JSONInfo;
+        public ResourceManager Rm { get; }
+
         protected struct JsonInfo
         {
             public uint ProgressLimit { get; set; }
@@ -33,10 +37,17 @@ namespace STO_Event_Calendar
                 DaysRequired = dr
             };
             JSONOut = JsonConvert.SerializeObject(JSONInfo, Formatting.Indented);
+            Rm = new ResourceManager("JSONStrings", typeof(JSON).Assembly);
         }
+        
+        private CultureInfo GetEnUs()
+        {
+            return new CultureInfo("en-US");
+        }
+
         public void PrintJson()
         {
-            Console.WriteLine("Here's the raw data (in JSON form):");
+            Console.WriteLine(Rm.GetString("Header", GetEnUs()));
             Console.WriteLine(JSONOut);
         }
         public void WriteJson(string OutPath)
@@ -44,7 +55,7 @@ namespace STO_Event_Calendar
             switch (JSONInfo) 
             { 
                 case null:
-                    throw new ArgumentNullException("Somehow WriteJson got called while the JSONInfo variable was null.");
+                    throw new ArgumentNullException(Rm.GetString("ExceptWriteJSON", GetEnUs()));
                 default:
                     File.WriteAllText(OutPath, JsonConvert.SerializeObject(JSONOut, Formatting.Indented));
                     break;

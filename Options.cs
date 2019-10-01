@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using CommandLine;
 
-namespace STO_Event_Calendar
+namespace STOEventCalendar
 {
     public class Options
     {
