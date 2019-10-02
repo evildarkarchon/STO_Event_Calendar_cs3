@@ -37,7 +37,7 @@ namespace STOEventCalendar
                 DaysRequired = dr
             };
             JSONOut = JsonConvert.SerializeObject(JSONInfo, Formatting.Indented);
-            Rm = new ResourceManager("JSONStrings", typeof(JSON).Assembly);
+            Rm = new ResourceManager("Strings", typeof(JSON).Assembly);
         }
         
         private CultureInfo GetEnUs()
@@ -47,7 +47,7 @@ namespace STOEventCalendar
 
         public void PrintJson()
         {
-            Console.WriteLine(Rm.GetString("Header", GetEnUs()));
+            Console.WriteLine(Rm.GetString("JSONHeader", GetEnUs()));
             Console.WriteLine(JSONOut);
         }
         public void WriteJson(string OutPath)

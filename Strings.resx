@@ -120,7 +120,10 @@
   <data name="ExceptWriteJSON" xml:space="preserve">
     <value>Somehow WriteJson got called while the JSONInfo variable was null.</value>
   </data>
-  <data name="Header" xml:space="preserve">
+  <data name="JSONHeader" xml:space="preserve">
     <value>Here's the raw data (in JSON form):</value>
+  </data>
+  <data name="KeyNotAnswered" xml:space="preserve">
+    <value>The question was not answered.</value>
   </data>
 </root>

@@ -12,7 +12,7 @@ namespace Keyboard
         }
         private static ResourceManager GetResources()
         {
-            return new ResourceManager("KeyStrings", typeof(Key).Assembly);
+            return new ResourceManager("Strings", typeof(Key).Assembly);
         }
 
         public static string Ask(string message)
@@ -24,7 +24,7 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("NotAnswered", GetEnUs())),
+                null => throw new ArgumentException(rm.GetString("KeyNotAnswered", GetEnUs())),
                 _ => Output
             };
         }

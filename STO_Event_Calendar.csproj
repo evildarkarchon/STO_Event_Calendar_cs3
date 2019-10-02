@@ -15,44 +15,26 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="JSONStrings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>JSONStrings.resx</DependentUpon>
-    </Compile>
-    <Compile Update="KeyStrings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>KeyStrings.resx</DependentUpon>
-    </Compile>
-    <Compile Update="ProgramStrings.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ProgramStrings.resx</DependentUpon>
-    </Compile>
     <Compile Update="Prompts.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Prompts.resx</DependentUpon>
     </Compile>
+    <Compile Update="Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="JSONStrings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>JSONStrings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="KeyStrings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>KeyStrings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="ProgramStrings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ProgramStrings.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Prompts.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Prompts.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

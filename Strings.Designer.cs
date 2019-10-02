@@ -22,14 +22,14 @@ namespace STO_Event_Calendar {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ProgramStrings {
+    internal class Strings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ProgramStrings() {
+        internal Strings() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace STO_Event_Calendar {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("STO_Event_Calendar.ProgramStrings", typeof(ProgramStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("STO_Event_Calendar.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,33 @@ namespace STO_Event_Calendar {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Somehow WriteJson got called while the JSONInfo variable was null..
+        /// </summary>
+        internal static string ExceptWriteJSON {
+            get {
+                return ResourceManager.GetString("ExceptWriteJSON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Here&apos;s the raw data (in JSON form):.
+        /// </summary>
+        internal static string JSONHeader {
+            get {
+                return ResourceManager.GetString("JSONHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The question was not answered..
+        /// </summary>
+        internal static string KeyNotAnswered {
+            get {
+                return ResourceManager.GetString("KeyNotAnswered", resourceCulture);
             }
         }
     }
