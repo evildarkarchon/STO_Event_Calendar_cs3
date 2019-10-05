@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STO_Event_Calendar", "STO_Event_Calendar.csproj", "{B0FAA9B2-79FD-480B-8985-92C56D2F1A06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STOEventCalendar", "STOEventCalendar.csproj", "{B0FAA9B2-79FD-480B-8985-92C56D2F1A06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

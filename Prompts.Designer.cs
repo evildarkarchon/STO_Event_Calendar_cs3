@@ -39,7 +39,7 @@ namespace STOEventCalendar {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("STO_Event_Calendar.Prompts", typeof(Prompts).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("STOEventCalendar.Prompts", typeof(Prompts).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
