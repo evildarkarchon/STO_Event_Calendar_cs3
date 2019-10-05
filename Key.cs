@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Globalization;
 using System.Resources;
+using STOEventCalendar;
 
 namespace Keyboard
 {
     class Key
     {
-        private static CultureInfo GetEnUs()
-        {
-            return new CultureInfo("en-US");
-        }
         private static ResourceManager GetResources()
         {
             return new ResourceManager("Strings", typeof(Key).Assembly);
@@ -24,7 +21,7 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("KeyNotAnswered", GetEnUs())),
+                null => throw new ArgumentException(rm.GetString("KeyNotAnswered", Utility.GetEnUs())),
                 _ => Output
             };
         }
@@ -65,7 +62,7 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("NotAnswered", GetEnUs())),
+                null => throw new ArgumentException(rm.GetString("NotAnswered", Utility.GetEnUs())),
                 _ => Output
             };
         }
@@ -104,7 +101,7 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("NotAnswered", GetEnUs())),
+                null => throw new ArgumentException(rm.GetString("NotAnswered", Utility.GetEnUs())),
                 _ => Output
             };
         }
@@ -146,7 +143,7 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("NotAnswered", GetEnUs())),
+                null => throw new ArgumentException(rm.GetString("NotAnswered", Utility.GetEnUs())),
                 _ => Output
             };
         }
@@ -181,6 +178,7 @@ namespace Keyboard
         public static T Ask<T>(string message)
         {
             ResourceManager rm = GetResources();
+            CultureInfo en_us = Utility.GetEnUs();
 
             Console.Write(message);
 
@@ -188,8 +186,8 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("NotAnswered", GetEnUs())),
-                _ => (T)Convert.ChangeType(Output, typeof(T), GetEnUs())
+                null => throw new ArgumentException(rm.GetString("NotAnswered", en_us)),
+                _ => (T)Convert.ChangeType(Output, typeof(T), en_us)
             };
         }
         public static T Ask<T>(string message, string exceptionmsg)
@@ -201,7 +199,7 @@ namespace Keyboard
             return Output switch
             {
                 null => throw new ArgumentException(exceptionmsg),
-                _ => (T)Convert.ChangeType(Output, typeof(T), GetEnUs()),
+                _ => (T)Convert.ChangeType(Output, typeof(T), Utility.GetEnUs()),
             };
         }
         public static T Ask<T>(string message, bool newline)
@@ -212,6 +210,7 @@ namespace Keyboard
             //else { Console.Write(message); }
 
             ResourceManager rm = GetResources();
+            CultureInfo en_us = Utility.GetEnUs();
 
             switch (newline)
             {
@@ -228,8 +227,8 @@ namespace Keyboard
 
             return Output switch
             {
-                null => throw new ArgumentException(rm.GetString("NotAnswered", GetEnUs())),
-                _ => (T)Convert.ChangeType(Output, typeof(T), GetEnUs()),
+                null => throw new ArgumentException(rm.GetString("NotAnswered", en_us)),
+                _ => (T)Convert.ChangeType(Output, typeof(T), en_us),
             };
         }
         public static T Ask<T>(string message, string exceptionmsg, bool newline)
@@ -251,7 +250,7 @@ namespace Keyboard
             return Output switch
             {
                 null => throw new ArgumentException(exceptionmsg),
-                _ => (T)Convert.ChangeType(Output, typeof(T), GetEnUs())
+                _ => (T)Convert.ChangeType(Output, typeof(T), Utility.GetEnUs())
             };
         }
     }

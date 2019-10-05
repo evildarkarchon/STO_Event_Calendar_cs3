@@ -39,15 +39,10 @@ namespace STOEventCalendar
             JSONOut = JsonConvert.SerializeObject(JSONInfo, Formatting.Indented);
             Rm = new ResourceManager("Strings", typeof(JSON).Assembly);
         }
-        
-        private CultureInfo GetEnUs()
-        {
-            return new CultureInfo("en-US");
-        }
 
         public void PrintJson()
         {
-            Console.WriteLine(Rm.GetString("JSONHeader", GetEnUs()));
+            Console.WriteLine(Rm.GetString("JSONHeader", Utility.GetEnUs()));
             Console.WriteLine(JSONOut);
         }
         public void WriteJson(string OutPath)
@@ -55,7 +50,7 @@ namespace STOEventCalendar
             switch (JSONInfo) 
             { 
                 case null:
-                    throw new ArgumentNullException(Rm.GetString("ExceptWriteJSON", GetEnUs()));
+                    throw new ArgumentNullException(Rm.GetString("ExceptWriteJSON", Utility.GetEnUs()));
                 default:
                     File.WriteAllText(OutPath, JsonConvert.SerializeObject(JSONOut, Formatting.Indented));
                     break;

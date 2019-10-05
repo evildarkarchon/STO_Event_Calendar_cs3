@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace STO_Event_Calendar {
+namespace STOEventCalendar {
     using System;
     
     
